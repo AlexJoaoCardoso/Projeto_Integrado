@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://defj6cdr1dy83"]
+
+[ext_resource type="Script" path="res://Levels/scripts/start_menu.gd" id="1_euyrq"]
+[ext_resource type="TileSet" uid="uid://bgdxardb7o763" path="res://Levels/Bases Das Telas/base_inicial.tres" id="2_50nap"]
+
+[node name="start_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_euyrq")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_50nap")
+format = 2
+
+[node name="Controles" type="VBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.473
+anchor_right = 0.499
+anchor_bottom = 0.473
+offset_left = -63.08
+offset_top = -35.84
+offset_right = 64.92
+offset_bottom = 69.16
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start_btn" type="Button" parent="Controles"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../quit_bnt")
+text = "Jogar"
+
+[node name="control_btn" type="Button" parent="Controles"]
+layout_mode = 2
+text = "Controles"
+
+[node name="quit_bnt" type="Button" parent="Controles"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../start_btn")
+text = "Sair"
+
+[connection signal="pressed" from="Controles/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="Controles/control_btn" to="." method="_on_control_btn_pressed"]
+[connection signal="pressed" from="Controles/quit_bnt" to="." method="_on_quit_bnt_pressed"]
