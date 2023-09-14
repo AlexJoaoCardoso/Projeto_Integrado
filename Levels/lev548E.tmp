@@ -1481,4 +1481,3 @@ position_smoothing_enabled = true
 drag_vertical_enabled = true
 
 [node name="Corvo" parent="." instance=ExtResource("4_l48bx")]
-position = Vector2(102, 104)
