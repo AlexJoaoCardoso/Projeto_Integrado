@@ -4,13 +4,8 @@ extends CharacterBody2D
 @export var speed = 1.0
 @export var jump_velocity: float = -300.0
 @export var double_jump_velocity: float = -200.0
-@export var dash_speed = 500.0
-@export var dash_duration = 1.0
-
-
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var dash = $dash
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped: bool = false
@@ -23,15 +18,12 @@ const dashlength = .1
 
 @onready var dash = $Dash
 
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
 		has_double_jumped = false
-<<<<<<< HEAD
-=======
 
 	if Input.is_action_just_pressed("dash") and canDash:
 		dash.start_dash(dashlength)
@@ -40,10 +32,7 @@ func _physics_process(delta):
 		canDash = true
 	speed = dashspeed if dash.is_dashing() else normalized_speed
 	
->>>>>>> main
 	# Handle Jump.
-
-	
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():#Normal jump
 			jump()
@@ -62,27 +51,10 @@ func _physics_process(delta):
 		velocity.x = direction.x * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
-<<<<<<< HEAD
-	
-	if Input.is_action_just_pressed("dash"):
-		dash.start_dash(dash_duration)
-	
-	var speed = dash_speed if dash.is_dashing() else speed
-	
-	
-	
-	
-	move_and_slide()
-	update_animation()
-	update_facing()
-	
-
-=======
 
 	move_and_slide()
 	update_animation()
 	update_facing()
->>>>>>> main
 
 func update_animation():
 	if not animation_locked:
@@ -100,13 +72,6 @@ func jump():
 	animated_sprite.play("Jump")
 	animation_locked = true
 
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> main
 func _on_animated_sprite_2d_animation_finished():
 	if(animated_sprite.animation == "Jump"):
 		animation_locked = false

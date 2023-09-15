@@ -4,25 +4,6 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwwmw"]
 texture = ExtResource("1_dfgx8")
-<<<<<<< HEAD
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.53033, 3.09359, 8, 1.14905, 8, 8, -8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.03293, 8, 2.03293, 8, 8, -8, 8)
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.14905, 8, 0.972271, 8, 8, -8, 8)
-4:0/0 = 0
-4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:0/0/physics_layer_0/angular_velocity = 0.0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.44715, -5.19629, 1.44124, -1.06066, 2.91681, 2.12132, 3.97748, 4.24264, 6.0988, 8, 8, -8, 8)
-=======
->>>>>>> main
 6:0/0 = 0
 6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1448,12 +1429,6 @@ texture = ExtResource("1_dfgx8")
 19:24/0 = 0
 19:24/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:24/0/physics_layer_0/angular_velocity = 0.0
-<<<<<<< HEAD
-3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.67938, -2.2981, 1.5026, 1.94454, 1.5026, 4.5962, 1.5026, 6.18719, 1.32582, 8, 2.03293, 8, 8, -8, 8)
-=======
 4:0/0 = 0
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1474,7 +1449,6 @@ texture = ExtResource("1_dfgx8")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2, 8, 2, 8, 8, -8, 8)
->>>>>>> main
 
 [resource]
 physics_layer_0/collision_layer = 1
