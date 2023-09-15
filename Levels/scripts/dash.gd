@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var timer = $"Cooldown"
+@onready var duration_timer = $Timer
 
 func start_dash(duration):
-	timer.wait_time = duration
-	timer.start()
-	
+		duration_timer.wait_time = duration
+		duration_timer.start()
+		
 func is_dashing():
-	return !timer.is_stopped()
+	return !duration_timer.is_stopped()
