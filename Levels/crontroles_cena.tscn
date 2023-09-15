@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://df62cphwvrjd5"]
+[gd_scene load_steps=3 format=3 uid="uid://df62cphwvrjd5"]
 
 [ext_resource type="Script" path="res://Levels/scripts/crontroles_cena.gd" id="1_uq66o"]
+[ext_resource type="Theme" uid="uid://cei6rlmpaoc08" path="res://Temas/Tema_Btns.tres" id="2_m7k1l"]
 
 [node name="Crontroles_cena" type="Control"]
 layout_mode = 3
@@ -15,6 +16,7 @@ script = ExtResource("1_uq66o")
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+theme = ExtResource("2_m7k1l")
 text = "Menu"
 
 [node name="Label" type="Label" parent="."]
