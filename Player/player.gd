@@ -12,7 +12,11 @@ extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var dash = $dash
 
+<<<<<<< Updated upstream
 # Get the gravity from the project settings to be synced with RigidBody nodes.
+=======
+
+>>>>>>> Stashed changes
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped: bool = false
 var animation_locked: bool = false
