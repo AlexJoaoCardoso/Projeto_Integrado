@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-
-@export var speed: float = 150.0
+@export var normalized_speed: float = 160.0
+@export var speed = 1.0
 @export var jump_velocity: float = -300.0
 @export var double_jump_velocity: float = -200.0
 @export var dash_speed = 500.0
@@ -12,12 +12,16 @@ extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var dash = $dash
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped: bool = false
 var animation_locked: bool = false
 var direction: Vector2 = Vector2.ZERO
+var canDash = true
 
+const dashspeed = 1000
+const dashlength = .1
+
+@onready var dash = $Dash
 
 
 func _physics_process(delta):
@@ -26,6 +30,17 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	else:
 		has_double_jumped = false
+<<<<<<< HEAD
+=======
+
+	if Input.is_action_just_pressed("dash") and canDash:
+		dash.start_dash(dashlength)
+		canDash = false
+		await get_tree().create_timer(1.0).timeout
+		canDash = true
+	speed = dashspeed if dash.is_dashing() else normalized_speed
+	
+>>>>>>> main
 	# Handle Jump.
 
 	
@@ -37,14 +52,17 @@ func _physics_process(delta):
 			velocity.y = double_jump_velocity
 			has_double_jumped = true
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	direction = Input.get_vector("left", "right", "up", "down")
+	
+	direction = Vector2(
+		Input.get_axis("left","right"),
+		Input.get_axis("up", "down")
+	).normalized()
 	
 	if direction:
 		velocity.x = direction.x * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
+<<<<<<< HEAD
 	
 	if Input.is_action_just_pressed("dash"):
 		dash.start_dash(dash_duration)
@@ -59,6 +77,12 @@ func _physics_process(delta):
 	update_facing()
 	
 
+=======
+
+	move_and_slide()
+	update_animation()
+	update_facing()
+>>>>>>> main
 
 func update_animation():
 	if not animation_locked:
@@ -76,10 +100,13 @@ func jump():
 	animated_sprite.play("Jump")
 	animation_locked = true
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> main
 func _on_animated_sprite_2d_animation_finished():
 	if(animated_sprite.animation == "Jump"):
 		animation_locked = false
