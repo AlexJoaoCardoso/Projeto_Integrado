@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1amf5f04o7b8"
-path="res://.godot/imported/Sem título.png-7542e516b3df000522928b4fb2300a65.ctex"
+uid="uid://cb7785buplj8d"
+path="res://.godot/imported/Dialog_Box(16 x 16).png-5c7e8553deae6b08dd5dd612f11c7b54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/scripts/Sem título.png"
-dest_files=["res://.godot/imported/Sem título.png-7542e516b3df000522928b4fb2300a65.ctex"]
+source_file="res://Art/Dialog_Box(16 x 16).png"
+dest_files=["res://.godot/imported/Dialog_Box(16 x 16).png-5c7e8553deae6b08dd5dd612f11c7b54.ctex"]
 
 [params]
 

@@ -8,12 +8,6 @@ extends Area2D
 func _ready():
 	collision.shape.size = spikes.get_rect().size
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_body_entered(body):
 	if body.name == "Player":
 		get_tree().reload_current_scene()
