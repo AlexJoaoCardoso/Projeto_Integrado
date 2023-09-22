@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://defj6cdr1dy83"]
+[gd_scene load_steps=4 format=3 uid="uid://defj6cdr1dy83"]
 
 [ext_resource type="Script" path="res://Levels/scripts/start_menu.gd" id="1_euyrq"]
 [ext_resource type="TileSet" uid="uid://bgdxardb7o763" path="res://Levels/Bases Das Telas/base_inicial.tres" id="2_50nap"]
+[ext_resource type="Theme" uid="uid://cei6rlmpaoc08" path="res://Temas/Tema_Btns.tres" id="3_no0p5"]
 
 [node name="start_menu" type="Control"]
 layout_mode = 3
@@ -36,15 +37,18 @@ grow_vertical = 2
 [node name="start_btn" type="Button" parent="Controles"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../quit_bnt")
+theme = ExtResource("3_no0p5")
 text = "Jogar"
 
 [node name="control_btn" type="Button" parent="Controles"]
 layout_mode = 2
+theme = ExtResource("3_no0p5")
 text = "Controles"
 
 [node name="quit_bnt" type="Button" parent="Controles"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../start_btn")
+theme = ExtResource("3_no0p5")
 text = "Sair"
 
 [connection signal="pressed" from="Controles/start_btn" to="." method="_on_start_btn_pressed"]

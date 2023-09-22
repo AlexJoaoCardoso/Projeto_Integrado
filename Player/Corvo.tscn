@@ -49,6 +49,7 @@ script = ExtResource("1_qy2ng")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.250016, -0.250016)
 shape = SubResource("CapsuleShape2D_xsfcy")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.250016, -0.250016)
