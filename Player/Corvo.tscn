@@ -1,42 +1,42 @@
 [gd_scene load_steps=9 format=3 uid="uid://cljp08kawor85"]
 
-[ext_resource type="Texture2D" uid="uid://dd6tlift83flt" path="res://Art/Pack/Legacy Pack/Mob/Small Bee/Fly/Fly-Sheet.png" id="1_oj1bo"]
 [ext_resource type="Script" path="res://Player/Corvo.gd" id="1_qy2ng"]
+[ext_resource type="Texture2D" uid="uid://bqmto07ryyy5x" path="res://Art/Witch/Corvo.png" id="2_cph3g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xsfcy"]
-radius = 5.0
-height = 12.0
+radius = 6.25002
+height = 12.5
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6rhdl"]
-atlas = ExtResource("1_oj1bo")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4km6a"]
+atlas = ExtResource("2_cph3g")
+region = Rect2(15, 0, 60, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ie4dq"]
-atlas = ExtResource("1_oj1bo")
-region = Rect2(64, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_0li52"]
+atlas = ExtResource("2_cph3g")
+region = Rect2(75, 0, 60, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ylqc"]
-atlas = ExtResource("1_oj1bo")
-region = Rect2(128, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbjwt"]
+atlas = ExtResource("2_cph3g")
+region = Rect2(135, 0, 60, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vvef2"]
-atlas = ExtResource("1_oj1bo")
-region = Rect2(192, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4v82"]
+atlas = ExtResource("2_cph3g")
+region = Rect2(195, 0, 60, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2xa2s"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6rhdl")
+"texture": SubResource("AtlasTexture_4km6a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ie4dq")
+"texture": SubResource("AtlasTexture_0li52")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ylqc")
+"texture": SubResource("AtlasTexture_fbjwt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vvef2")
+"texture": SubResource("AtlasTexture_w4v82")
 }],
 "loop": true,
 "name": &"Idle",
@@ -52,7 +52,8 @@ shape = SubResource("CapsuleShape2D_xsfcy")
 disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.250016, -0.250016)
-scale = Vector2(0.460937, 0.460937)
+position = Vector2(1, -2)
+scale = Vector2(0.326725, 0.326725)
 sprite_frames = SubResource("SpriteFrames_2xa2s")
 animation = &"Idle"
+frame_progress = 0.445875
