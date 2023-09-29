@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf6kqtrp18bff"]
+
+[ext_resource type="Texture2D" uid="uid://bc4w55wgyyv1j" path="res://Art/Witch/correndo.png" id="1_hwebn"]
+[ext_resource type="Script" path="res://Player/Dash_ghost_scene.gd" id="2_qhngp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7bd6"]
+atlas = ExtResource("1_hwebn")
+region = Rect2(34, 117, 302, 283)
+
+[node name="DashGhost" type="Sprite2D"]
+position = Vector2(0.755, 4)
+scale = Vector2(0.141, 0.141)
+texture = SubResource("AtlasTexture_g7bd6")
+script = ExtResource("2_qhngp")

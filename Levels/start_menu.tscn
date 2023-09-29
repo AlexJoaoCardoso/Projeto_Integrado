@@ -38,18 +38,18 @@ grow_vertical = 2
 layout_mode = 2
 focus_neighbor_top = NodePath("../quit_bnt")
 theme = ExtResource("3_no0p5")
-text = "Jogar"
+text = "Play"
 
 [node name="control_btn" type="Button" parent="Controles"]
 layout_mode = 2
 theme = ExtResource("3_no0p5")
-text = "Controles"
+text = "Controls"
 
 [node name="quit_bnt" type="Button" parent="Controles"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../start_btn")
 theme = ExtResource("3_no0p5")
-text = "Sair"
+text = "Quit"
 
 [connection signal="pressed" from="Controles/start_btn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="Controles/control_btn" to="." method="_on_control_btn_pressed"]
