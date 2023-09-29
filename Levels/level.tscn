@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d3wkdtdpuga17" path="res://Art/Pack/Legacy Pack/Assets/Tree-Assets.png" id="2_a8pa8"]
 [ext_resource type="Texture2D" uid="uid://bcwonkoa74h07" path="res://Art/Pack/Legacy Pack/Assets/Buildings.png" id="2_jyqxy"]
 [ext_resource type="PackedScene" uid="uid://b8s0c187mm3v5" path="res://Player/player.tscn" id="2_q5jqd"]
-[ext_resource type="PackedScene" uid="uid://iv0nvip6ikhp" path="res://dash.tscn" id="3_r0vue"]
+[ext_resource type="PackedScene" uid="uid://iv0nvip6ikhp" path="res://Levels/dash.tscn" id="3_r0vue"]
 [ext_resource type="Texture2D" uid="uid://cofc5xqt58bml" path="res://Art/Witch/placas madeira.png" id="3_vbp1g"]
 [ext_resource type="PackedScene" uid="uid://kck1ib4bwyf2" path="res://Levels/pause_menu.tscn" id="7_up8pr"]
 [ext_resource type="Script" path="res://Levels/scripts/Spikes_area.gd" id="8_utim3"]
