@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccyft6dfl438w"]
+
+[ext_resource type="Texture2D" uid="uid://bf3wp3nt26bb3" path="res://Art/Pack/Legacy Pack/Assets/Tiles.png" id="1_1ppxd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deue3"]
+size = Vector2(46, 13)
+
+[sub_resource type="Animation" id="Animation_20v7g"]
+resource_name = "disappears"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1to4m"]
+_data = {
+"disappears": SubResource("Animation_20v7g")
+}
+
+[node name="MovingPlatform2" type="Node2D"]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+disable_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+visible = false
+texture = ExtResource("1_1ppxd")
+region_enabled = true
+region_rect = Rect2(81, 94, 46, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_deue3")
+disabled = true
+one_way_collision = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D"]
+autoplay = "disappears"
+libraries = {
+"": SubResource("AnimationLibrary_1to4m")
+}

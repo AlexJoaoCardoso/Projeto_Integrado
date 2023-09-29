@@ -17,7 +17,7 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 theme = ExtResource("2_m7k1l")
-text = "Menu"
+text = "Back"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -26,12 +26,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Andar  Up (W)
-Andar  Down (S)
-Andar  left (A)
-Andar Right (D)
+text = "Walk (W A S D)
 Jump (Space)
-Dash (Shift)
+Dash (Right Mouse Button)
 "
 horizontal_alignment = 1
 vertical_alignment = 1

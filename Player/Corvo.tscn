@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bqmto07ryyy5x" path="res://Art/Witch/Corvo.png" id="2_cph3g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xsfcy"]
-radius = 6.25002
+radius = 6.25
 height = 12.5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4km6a"]

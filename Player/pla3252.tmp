@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Player/CharacterStateMachine.gd" id="7_swk87"]
 [ext_resource type="Script" path="res://Player/GroundState.gd" id="8_ln66n"]
 [ext_resource type="Script" path="res://Player/AirState.gd" id="9_6m8fx"]
-[ext_resource type="Script" path="res://Player/StateDebugLabel.gd" id="10_0ftwu"]
+[ext_resource type="Script" path="res://Player/Label.gd" id="10_r032p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ruayb"]
 animations = [{
@@ -45,9 +45,9 @@ animations = [{
 radius = 9.0
 height = 43.5
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tkk5h"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xr25"]
 atlas = ExtResource("6_fguhx")
-region = Rect2(490, 45, 280, 255)
+region = Rect2(299, 23, 173, 277)
 
 [sub_resource type="Animation" id="Animation_vr7vi"]
 length = 0.001
@@ -156,73 +156,9 @@ tracks/4/keys = {
 "values": [Vector2(0.164, 0.164)]
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2xr25"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkk5h"]
 atlas = ExtResource("6_fguhx")
-region = Rect2(299, 23, 173, 277)
-
-[sub_resource type="Animation" id="Animation_mnq1h"]
-resource_name = "jump"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("AtlasTexture_2xr25")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-0.5, -2.5)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.154893, 0.154893)]
-}
+region = Rect2(490, 45, 280, 255)
 
 [sub_resource type="Animation" id="Animation_c14ql"]
 resource_name = "run"
@@ -257,10 +193,10 @@ tracks/2/path = NodePath("Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [0]
+"values": []
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -285,6 +221,45 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0.755294, 3.955)]
+}
+
+[sub_resource type="Animation" id="Animation_mnq1h"]
+resource_name = "jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("AtlasTexture_2xr25")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2evfx"]
@@ -340,7 +315,7 @@ visible = false
 position = Vector2(-23, -31)
 scale = Vector2(0.131429, 0.131429)
 sprite_frames = SubResource("SpriteFrames_ruayb")
-animation = &"Jump"
+animation = &"Idle"
 autoplay = "Idle"
 centered = false
 
@@ -350,7 +325,7 @@ shape = SubResource("CapsuleShape2D_2ef1s")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.755294, 3.955)
 scale = Vector2(0.140824, 0.140824)
-texture = SubResource("AtlasTexture_tkk5h")
+texture = SubResource("AtlasTexture_2xr25")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -370,22 +345,19 @@ current_state = NodePath("Ground")
 
 [node name="Ground" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("air_state")]
 script = ExtResource("8_ln66n")
-jump_velocity = -300.0
 air_state = NodePath("../Air")
 
 [node name="Air" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("landing_state")]
 script = ExtResource("9_6m8fx")
 landing_state = NodePath("../Ground")
-double_jump_velocity = -200.0
+landing_animation = "jump"
 
-[node name="StateDebugLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
-visible = false
+[node name="StateDebugLabel" type="Label" parent="."]
 offset_left = -64.0
 offset_top = -53.0
 offset_right = 71.0
 offset_bottom = -27.0
 text = "State:"
-script = ExtResource("10_0ftwu")
-state_machine = NodePath("../CharacterStateMachine")
+script = ExtResource("10_r032p")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
